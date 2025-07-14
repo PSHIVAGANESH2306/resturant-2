@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Royal Bites Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #7b1fa2;
+      color: white;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 140px 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2.section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #7b1fa2;
+      font-size: 2rem;
+    }
+
+    .about {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .menu-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 15px;
+    }
+
+    .menu-card-content h3 {
+      margin-bottom: 10px;
+      color: #d32f2f;
+    }
+
+    .menu-card-content p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #7b1fa2;
+      color: white;
+      border: none;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #6a1b9a;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Royal Bites</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reservation">Reserve</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Fine Dining, Great Taste</h2>
+    <p>Authentic flavors crafted by top chefs</p>
+  </section>
+
+  <section id="about" class="container">
+    <h2 class="section-title">About Us</h2>
+    <p class="about">
+      At Royal Bites, we’re passionate about providing an unforgettable culinary experience. We serve a wide variety of Indian and Continental dishes, combining tradition with innovation. Whether it's a cozy dinner or a family gathering, we have something special for every guest.
+    </p>
+  </section>
+
+  <section id="menu" class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-section">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Butter Chicken">
+        <div class="menu-card-content">
+          <h3>Butter Chicken – ₹350</h3>
+          <p>Deliciously creamy chicken curry made with Indian spices and butter-rich gravy.</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Paneer Tikka">
+        <div class="menu-card-content">
+          <h3>Paneer Tikka – ₹280</h3>
+          <p>Marinated cottage cheese cubes grilled with spices & served with mint chutney.</p>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="1.jpg" alt="Pasta Alfredo">
+        <div class="menu-card-content">
+          <h3>Alfredo Pasta – ₹299</h3>
+          <p>Creamy white sauce pasta with herbs, cheese, and a touch of garlic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1555243896-c709bfa0b564" alt="Dining Room">
+      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0" alt="Indian Thali">
+      <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0" alt="Dessert">
+    </div>
+  </section>
+
+  <section id="reservation" class="container">
+    <h2 class="section-title">Reserve a Table</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="date" required>
+      <input type="time" required>
+      <input type="number" placeholder="Guests (1-20)" min="1" max="20" required>
+      <button type="submit">Reserve Now</button>
+    </form>
+  </section>
+
+  <section id="contact" class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <p><strong>Address:</strong> 123 Foodie Lane, Bengaluru, India</p>
+    <p><strong>Email:</strong> info@royalbites.com</p>
+    <p><strong>Phone:</strong> +91 98765 43210</p>
+    <div class="map">
+      <iframe src="https://maps.google.com/maps?q=bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Royal Bites Restaurant. All rights reserved.
+  </footer>
+
+</body>
+</html>
